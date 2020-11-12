@@ -23,6 +23,6 @@ public class Helado extends Postre{
     @Override
     public String toString() {
         return "Helado{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
-    } 
-    
+    }
+      
 }

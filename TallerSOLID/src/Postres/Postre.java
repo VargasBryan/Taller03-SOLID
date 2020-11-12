@@ -24,4 +24,13 @@ public abstract class Postre {
         return aderezos;
     }
 	
+	public void anadirAderezo( Aderezo aderezo) {
+		this.getAderezos().add(aderezo);
+	}
+	
+	public void quitarAderezo(Aderezo aderezo) {
+		this.getAderezos().remove(aderezo);
+	}
+	
+	
 }

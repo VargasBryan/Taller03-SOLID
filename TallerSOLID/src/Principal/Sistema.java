@@ -31,15 +31,15 @@ public class Sistema {
         OperacionesAderezo.anadirAderezoHelado(helado_vainilla, frutilla);
         System.out.println(helado_vainilla);
 //        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        System.out.println(ManejadorDePrecio.showPrecioFinal(helado_vainilla));
         
         // Producir Pastel
         Pastel pastel_chocolate = new Pastel("Chocolate");
         OperacionesAderezo.quitarAderezoPastel(pastel_chocolate, crema);
         OperacionesAderezo.anadirAderezoPastel(pastel_chocolate, frutilla);
         System.out.println(pastel_chocolate);
+        System.out.println(ManejadorDePrecio.showPrecioFinal(pastel_chocolate));
 //        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        System.out.println(helado_vainilla.showPrecioFinal());
         
         
     }

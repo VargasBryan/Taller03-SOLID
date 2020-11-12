@@ -1,5 +1,9 @@
 # Taller03-SOLID
 
+### Punto 1
+Dado que tanto la clase Pastel como la clase Helado poseen atributos y funcionalidades similares causando una repetición de código y baja optimización de recursos, produce una violación al principio de substitución de Liskov dado que ambas clases podrían ser derivadas de una super clase que contenga las funcionalidades comunes entre ambas clases. 
+### Punto 2
+En la clase OperacionesAderezo se puede observar una gran cantidad de métodos que definen la funcionalidad de agregar y quitar aderezos de los distintos postres, por lo que sería una violación al principio abierto/cerrado dado que el número de métodos aumentaría considerando la situación en que se requiera aumentar la variedad de postres, además de modificar los tipos de datos al tipo de postre a utilizar. Los ideal sería implementar dichas funcionalidades en la clase Postre, funcionando así de manera independiente sin importar el tipo de postre con el que desea trabajar. 
 ### Punto 3
 Las clases pastel y helado implementan dos métodos que se encuentran muy relacionados. Un método se encarga de calcular el valor final del producto y el otro se encarga de mostrar por consola el valor final. Se sabe que el valor final de todos los productos que va a vender esta empresa será calculado con una misma fórmula, por lo que cada producto que se ingrese al sistema deberá de implementar el método para calcular el precio final. 
 Al momento el sistema no es muy grande, pero ya es evidente una malá práctica de diseño. El principio que se estaría vulnerando es el de responsabilidad única, el cual indica que un objeto debe de realizar un único trabajo. Así mismo, se sabe que si queremos cambiar la fórmula para un producto, habría que hacer lo mismo con los otros. Estas son razones suficientes para tener que implementar una clase independiente y dedicada a el cáculo del precio final. De esta forma, un cambio se aplicaría a todas las clases.  

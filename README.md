@@ -17,3 +17,7 @@ Así que se creó una clase abstracta Aderezo, para que cada vez que se necesite
 Las clases lecheDeslactosada y lecheDescremada heredaban de la clase lecheEntera PERO la clase lecheDeslactosada heredaba un método que no debía utilizar ya que con la leche deslactosada no se podía realizar la preparación de un pastel, por lo que se encontró una infracción al principio de Liskov y se procedió a darle una solución.
 Se creó una clase llamada leche la cuál hereda de lecheEntera, la clase lecheEntera se queda únicamente con el método para hacer los helados ya que los helados si se puede realizar con ambos tipos de leche, lecheDeslactosada hereda de lecheEntera, leche hereda de lecheEntera y se le añade el método para hacer el pastel (esta clase también es abstracta), y finalmente la clase lecheDescremada hereda de leche ya que con esta leche se pueden hacer helados y pasteles. Se modifica la clase manejadorDeLeche para validar que cuando reciba una orden de pastel verificar que sea de una lecheDescremada y realizar el casting correspondiente para el uso del método para hacer pastel.
 
+### Punto 6
+Se corrigió el main y se implementó el código según nuestros cambios y los métodos creados.
+
+

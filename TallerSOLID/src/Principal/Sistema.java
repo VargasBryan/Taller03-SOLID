@@ -18,30 +18,37 @@ import Leche.*;
  */
 public class Sistema {
 	public static void main(String [ ] args){
-        // Producir un helado de vainilla y una torta de chocolate, 
-        // a ambos agregarles CREMA y FRUTILLAS
-        // y cambiar el tipo de leche por Leche Descremada
-        // Finalmente mostrar el precio final de cada uno
-        LecheEntera leche = new LecheDeslactosada();
+       
+		Aderezo crema = new Crema("crema");
+        Aderezo frutilla = new Crema("frutilla");
         LecheEntera leche2 = new LecheDescremada();
         ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
         
         // Producir Helado
         Helado helado_vainilla = new Helado("Vainilla");
-        Aderezo crema = new Crema("crema");
-        Aderezo frutilla = new Crema("frutilla");
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, crema);
-        OperacionesAderezo.anadirAderezoHelado(helado_vainilla, frutilla);
+        //Agregar CREMA y FRUTILLAS
+        helado_vainilla.anadirAderezo(crema);
+        helado_vainilla.anadirAderezo(frutilla);
         System.out.println(helado_vainilla);
-        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        // y cambiar el tipo de leche por Leche Descremada
+        mnj_leche.cambiarTipoLeche(leche2, helado_vainilla);
+        // Finalmente mostrar el precio final de cada uno
+        System.out.println(ManejadorDePrecio.showPrecioFinal(helado_vainilla));
         
+        
+    
         // Producir Pastel
         Pastel pastel_chocolate = new Pastel("Chocolate");
-        OperacionesAderezo.quitarAderezoPastel(pastel_chocolate, crema);
-        OperacionesAderezo.anadirAderezoPastel(pastel_chocolate, frutilla);
+        //Agregar CREMA y FRUTILLAS
+        pastel_chocolate.anadirAderezo(crema);
+        pastel_chocolate.anadirAderezo(frutilla);
         System.out.println(pastel_chocolate);
-        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        System.out.println(helado_vainilla.showPrecioFinal());
+        // y cambiar el tipo de leche por Leche Descremada
+        mnj_leche.cambiarTipoLeche(leche2, pastel_chocolate);
+        // Finalmente mostrar el precio final de cada uno
+        System.out.println(ManejadorDePrecio.showPrecioFinal(pastel_chocolate));
+        
+
         }
+		
 }

@@ -1,5 +1,10 @@
 package Adicionales;
 
+/**
+*
+* @author Joel Choez
+*/
+
 public class Crema extends Aderezo{
 
 	public Crema(String nombre) {

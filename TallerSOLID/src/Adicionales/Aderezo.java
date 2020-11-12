@@ -1,5 +1,10 @@
 package Adicionales;
 
+/**
+*
+* @author Joel Choez
+*/
+
 public abstract class Aderezo {
 	private String nombre;
 	

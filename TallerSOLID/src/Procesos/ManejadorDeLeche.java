@@ -19,16 +19,16 @@ public class ManejadorDeLeche {
 
     public void cambiarTipoLeche(LecheEntera leche, Object postre) {
         // Cambiar tipo de leche en la preparación de los postres, usar leche deslactosada
-        System.out.println(postre.getClass());
-        System.out.println(Pastel.class);
         if (postre.getClass() != Pastel.class) {
             leche.usarHelado();
         } else {
+        	
             if (leche.getClass() == LecheDescremada.class) {
-                LecheDescremada l = (LecheDescremada) leche;
+            	LecheDescremada l = (LecheDescremada) leche;
                 l.usarPastel();
             }
+            }
         }
-    }
+   }
     
-}
+

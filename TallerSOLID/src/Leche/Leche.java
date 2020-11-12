@@ -7,13 +7,8 @@ package Leche;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author Ma. Cecilia
  */
-public class LecheDeslactosada extends LecheEntera {
-    
-    @Override
-    public void usarHelado() {
-        System.out.println("Usando leche deslactosada");
-    }
-        
+public abstract class Leche extends LecheEntera {
+    public abstract void usarPastel();
 }

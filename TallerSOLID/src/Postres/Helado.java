@@ -5,39 +5,22 @@
  */
 package Postres;
 
-import java.util.ArrayList;
-import Adicionales.Aderezo;
 import Procesos.ManejadorDePrecio;
 
 /**
  *
  * @author Pedro Mendoza
  */
-public class Helado extends ManejadorDePrecio{
-    private String sabor;
-    private double precioParcial;
-    private ArrayList<Aderezo> aderezos;
+public class Helado extends Postre{
     
     public Helado(String sabor){
-        aderezos= new ArrayList<>();
-        this.sabor=sabor;
+        super(sabor);
         this.precioParcial = 7.85;
-    }
-    
-
-    public ArrayList<Aderezo> getAderezos() {
-        return aderezos;
     }
 
     @Override
     public String toString() {
         return "Helado{" + "sabor=" + sabor + ", precioParcial=" + precioParcial + ", aderezos=" + aderezos + '}';
-    }
-    
-    public String showPrecioFinal(){
-        return "Precio Final: $ " + calcularPrecioFinal(precioParcial,aderezos);
-    }
-    
-    
+    } 
     
 }
